@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Practica2</string>
+
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="login_username_hint">Usuario</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button_text">Ingresar</string>
+    <string name="login_error_message">Usuario o contraseña incorrectos</string>
+
+    <string name="products_title">Productos Disponibles</string>
+    <string name="product_add_to_cart_button">Agregar al Carrito</string>
+    <string name="product_added_notification_title">Producto Agregado</string>
+    <string name="product_added_notification_message">Se ha agregado un producto a tu carrito.</string>
+
+    <string name="cart_title">Mi Carrito</string>
+    <string name="cart_empty_message">No hay productos en tu carrito.</string>
+    <string name="cart_total_label">Total:</string>
+
+    <string name="nav_header_title">Menú</string>
+    <string name="nav_item_products">Productos</string>
+    <string name="nav_item_cart">Mi Carrito</string>
+    <string name="nav_item_logout">Cerrar Sesión</string>
+    <string name="nav_drawer_open">Abrir menú de navegación</string>
+    <string name="nav_drawer_close">Cerrar menú de navegación</string>
+
+    <string name="cirulo4">EJEMPLOS DE ALARMAS</string>
+    <string name="tiempo">Tiempo Real Transcurrido (TRT)</string>
+    <string name="tiempoi">Repetitiva TRT (15 min)</string>
+    <string name="tiempo2">No Repetitiva TRT (1 min)</string>
+    <string name="reloj">Reloj en Tiempo Real (RTR)</string>
+    <string name="relojl">Repetir una vez al dia</string>
+    <string name="reloj2">Repetir cada cierto tiempo</string>
+    <string name="concel">Cancelar alarma</string>
+    <string name="establecer">Establecer Fecha</string>
+    <string name="establecer2">Establecer Horario</string>
+    <string name="notificacion_title">Notificación de Alarma</string>
+    <string name="notification_message">¡Tu alarma ha sonado!</string>
+
+</resources>

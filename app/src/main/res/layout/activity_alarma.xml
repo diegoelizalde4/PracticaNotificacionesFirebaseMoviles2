@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cirulo4"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tiempo"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnAlarmal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tiempoi"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnAlarma2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tiempo2"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reloj"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnAlarma3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relojl"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnAlarma4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reloj2"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/concel"
+            android:layout_marginTop="32dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
