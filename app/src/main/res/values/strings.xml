@@ -22,6 +22,7 @@
     <string name="nav_item_logout">Cerrar Sesión</string>
     <string name="nav_drawer_open">Abrir menú de navegación</string>
     <string name="nav_drawer_close">Cerrar menú de navegación</string>
+    <string name="nav_item_multimedia">Multimedia</string>
 
     <string name="cirulo4">EJEMPLOS DE ALARMAS</string>
     <string name="tiempo">Tiempo Real Transcurrido (TRT)</string>
@@ -36,4 +37,9 @@
     <string name="notificacion_title">Notificación de Alarma</string>
     <string name="notification_message">¡Tu alarma ha sonado!</string>
 
+    <string name="titulo">Recursos Multimedia</string>
+    <string name="menu2">Media Player</string>
+    <string name="menu3">Video View</string>
+    <string name="play">Reproducir</string>
+    <string name="stop">Detener</string>
 </resources>

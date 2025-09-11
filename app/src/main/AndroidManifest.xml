@@ -28,8 +28,10 @@
         <activity android:name=".CartActivity" android:exported="false" />
         <activity android:name=".AlarmaActivity" android:exported="false" />
         <activity android:name=".PendingActivity" android:exported="false" />
+        <activity android:name=".MultimediaActivity" android:exported="false" />
+        <activity android:name=".MediaActivity" android:exported="false" />
+        <activity android:name=".VideoActivity" android:exported="false" />
 
-        <!-- Declaracion del servicio de Firebase -->
         <service
             android:name=".MyFirebaseMessagingService"
             android:exported="false">

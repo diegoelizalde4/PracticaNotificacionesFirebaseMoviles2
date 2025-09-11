@@ -11,6 +11,9 @@
             android:id="@+id/nav_alarms"
             android:title="Alarmas" />
         <item
+            android:id="@+id/nav_multimedia"
+            android:title="@string/nav_item_multimedia" />
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/nav_item_logout" />
     </group>

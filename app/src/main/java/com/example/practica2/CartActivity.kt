@@ -54,9 +54,7 @@ class CartActivity : AppCompatActivity() {
             recyclerView.adapter = adapter
         }
 
-        // Configurar el listener del botón flotante
         fabAlarm.setOnClickListener {
-            // El carrito debe contener elementos para poder establecer la alarma
             if (cartProducts.isNotEmpty()) {
                 setPendingCartAlarm()
                 Toast.makeText(this, "Alarma para carrito pendiente establecida en 1 minuto.", Toast.LENGTH_SHORT).show()
@@ -92,6 +90,11 @@ class CartActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
+                R.id.nav_multimedia -> {
+                    val intent = Intent(this, MultimediaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
@@ -103,7 +106,6 @@ class CartActivity : AppCompatActivity() {
     }
 
     private fun setPendingCartAlarm() {
-        // Usa la alarma no repetitiva de "Tiempo Real Transcurrido"
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         val intent = Intent(this, PendingActivity::class.java).apply {
@@ -112,7 +114,7 @@ class CartActivity : AppCompatActivity() {
         }
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
-        val futureInMillis = SystemClock.elapsedRealtime() + 60 * 1000 // 1 minuto
+        val futureInMillis = SystemClock.elapsedRealtime() + 60 * 1000
         alarmManager.set(
             AlarmManager.ELAPSED_REALTIME_WAKEUP,
             futureInMillis,

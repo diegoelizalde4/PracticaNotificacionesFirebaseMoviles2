@@ -79,6 +79,11 @@ class AlarmaActivity : AppCompatActivity() {
                 R.id.nav_alarms -> {
                     drawerLayout.closeDrawer(GravityCompat.START)
                 }
+                R.id.nav_multimedia -> {
+                    val intent = Intent(this, MultimediaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
@@ -99,7 +104,6 @@ class AlarmaActivity : AppCompatActivity() {
     }
 
     private fun alarmaTiempoRealTranscurrido1() {
-        // Alarma repetitiva, se activa en 15 minutos y cada 15 minutos después [cite: 139]
         val futureInMillis = SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_FIFTEEN_MINUTES
         val interval = AlarmManager.INTERVAL_FIFTEEN_MINUTES
         alarmMgr.setInexactRepeating(
@@ -112,7 +116,6 @@ class AlarmaActivity : AppCompatActivity() {
     }
 
     private fun alarmaTiempoRealTranscurrido2() {
-        // Alarma no repetitiva, se activa en 1 minuto [cite: 156]
         val futureInMillis = SystemClock.elapsedRealtime() + 60 * 1000
         alarmMgr.set(
             AlarmManager.ELAPSED_REALTIME_WAKEUP,
@@ -123,7 +126,6 @@ class AlarmaActivity : AppCompatActivity() {
     }
 
     private fun alarmaRelojEnTiempoReal1() {
-        // Alarma repetitiva, se activa a una hora específica, cada día [cite: 167]
         val calendar: Calendar = Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.HOUR_OF_DAY, 7)
@@ -139,7 +141,6 @@ class AlarmaActivity : AppCompatActivity() {
     }
 
     private fun alarmaRelojEnTiempoReal2() {
-        // Alarma repetitiva, se activa a una hora específica, cada minuto [cite: 184]
         val calendar: Calendar = Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.HOUR_OF_DAY, 15)

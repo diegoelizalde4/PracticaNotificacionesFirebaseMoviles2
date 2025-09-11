@@ -79,6 +79,11 @@ class ProductsActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
+                R.id.nav_multimedia -> {
+                    val intent = Intent(this, MultimediaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
