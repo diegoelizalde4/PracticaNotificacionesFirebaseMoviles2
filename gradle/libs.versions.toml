@@ -9,6 +9,7 @@ appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+zxing = "4.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,7 +23,8 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 firebase-bom = { module = "com.google.firebase:firebase-bom", version = "34.2.0" }
 firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx", version = "24.0.0" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics", version = "22.0.0" }
+zxing-android-embedded = { group = "com.journeyapps", name = "zxing-android-embedded", version.ref = "zxing" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-

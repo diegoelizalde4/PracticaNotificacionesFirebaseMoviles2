@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.SystemClock
-import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -92,6 +91,11 @@ class CartActivity : AppCompatActivity() {
                 }
                 R.id.nav_multimedia -> {
                     val intent = Intent(this, MultimediaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                R.id.nav_camara -> {
+                    val intent = Intent(this, CamaraActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

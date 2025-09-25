@@ -84,6 +84,11 @@ class AlarmaActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
+                R.id.nav_camara -> {
+                    val intent = Intent(this, CamaraActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

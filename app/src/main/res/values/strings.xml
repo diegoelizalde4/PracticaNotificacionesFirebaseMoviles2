@@ -23,6 +23,7 @@
     <string name="nav_drawer_open">Abrir menú de navegación</string>
     <string name="nav_drawer_close">Cerrar menú de navegación</string>
     <string name="nav_item_multimedia">Multimedia</string>
+    <string name="nav_item_camara">Cámara</string>
 
     <string name="cirulo4">EJEMPLOS DE ALARMAS</string>
     <string name="tiempo">Tiempo Real Transcurrido (TRT)</string>
@@ -42,4 +43,21 @@
     <string name="menu3">Video View</string>
     <string name="play">Reproducir</string>
     <string name="stop">Detener</string>
+
+    <string name="titulo_camara">Gestión de cámara</string>
+    <string name="menu_lector">Lector Barras/QR</string>
+    <string name="menu_foto">Tomar foto</string>
+    <string name="titulo_lector">Lector de Barra y QR</string>
+    <string name="escanear">Escanear</string>
+    <string name="codigo_leido">Código leído</string>
+    <string name="captura_descripcion">Captura descripción</string>
+    <string name="capturar">Capturar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="buscar">Buscar</string>
+    <string name="hint_extra1">Información Adicional 1</string>
+    <string name="hint_extra2">Información Adicional 2</string>
+    <string name="titulo_foto">Tomar fotografía</string>
+    <string name="tomar_foto">Tomar fotografía</string>
+    <string name="guardar_foto">Guardar Fotografía</string>
+    <string name="todo">TODO</string>
 </resources>

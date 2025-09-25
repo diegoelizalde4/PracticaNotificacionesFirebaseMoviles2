@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -81,6 +80,11 @@ class ProductsActivity : AppCompatActivity() {
                 }
                 R.id.nav_multimedia -> {
                     val intent = Intent(this, MultimediaActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                R.id.nav_camara -> {
+                    val intent = Intent(this, CamaraActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
