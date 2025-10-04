@@ -99,6 +99,11 @@ class CartActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
+                R.id.nav_camerax -> {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

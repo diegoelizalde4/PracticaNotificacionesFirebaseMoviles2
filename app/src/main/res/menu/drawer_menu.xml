@@ -17,6 +17,9 @@
             android:id="@+id/nav_camara"
             android:title="@string/nav_item_camara" />
         <item
+            android:id="@+id/nav_camerax"
+            android:title="@string/nav_item_camerax" />
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/nav_item_logout" />
     </group>
