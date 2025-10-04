@@ -90,7 +90,7 @@ class AlarmaActivity : AppCompatActivity() {
                     finish()
                 }
                 R.id.nav_camerax -> {
-                    val intent = Intent(this, CamaraActivity::class.java)
+                    val intent = Intent(this, CamaraXActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

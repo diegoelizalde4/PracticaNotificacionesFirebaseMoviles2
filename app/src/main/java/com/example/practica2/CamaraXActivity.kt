@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.activity.result.contract.ActivityResultContracts
@@ -55,20 +56,31 @@ class CamaraXActivity : AppCompatActivity() {
     private val selectImageLauncher =
         registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
             uri?.let {
+                // Oculta la vista previa de la cámara y el video
+                viewFinder.visibility = View.GONE
+                videoView.visibility = View.GONE
+                // Muestra la imagen seleccionada y la trae al frente
                 imageView.setImageURI(uri)
                 imageView.visibility = View.VISIBLE
-                videoView.visibility = View.GONE
-                viewFinder.visibility = View.GONE
+                imageView.bringToFront() // <-- CORRECCIÓN AQUÍ
             }
         }
 
     private val selectVideoLauncher =
         registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
             uri?.let {
-                videoView.setVideoURI(uri)
-                videoView.visibility = View.VISIBLE
-                imageView.visibility = View.GONE
+                // Oculta la vista previa de la cámara y la imagen
                 viewFinder.visibility = View.GONE
+                imageView.visibility = View.GONE
+                // Muestra el VideoView
+                videoView.visibility = View.VISIBLE
+                // Configura el MediaController para los controles de reproducción
+                val mediaController = MediaController(this)
+                mediaController.setAnchorView(videoView)
+                videoView.setMediaController(mediaController)
+                // Establece el URI del video y comienza la reproducción
+                videoView.setVideoURI(uri)
+                videoView.requestFocus()
                 videoView.start()
             }
         }
@@ -100,6 +112,7 @@ class CamaraXActivity : AppCompatActivity() {
     }
 
     private fun takePhoto() {
+        // ... (el resto del código permanece igual)
         val imageCapture = imageCapture ?: return
 
         val name = SimpleDateFormat(FILENAME_FORMAT, Locale.US)
@@ -138,6 +151,7 @@ class CamaraXActivity : AppCompatActivity() {
     }
 
     private fun captureVideo() {
+        // ... (el resto del código permanece igual)
         val videoCapture = this.videoCapture ?: return
 
         videoCaptureButton.isEnabled = false
@@ -205,6 +219,7 @@ class CamaraXActivity : AppCompatActivity() {
 
 
     private fun startCamera() {
+        // ... (el resto del código permanece igual)
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener({
@@ -241,21 +256,25 @@ class CamaraXActivity : AppCompatActivity() {
     }
 
     private fun requestPermissions() {
+        // ... (el resto del código permanece igual)
         activityResultLauncher.launch(REQUIRED_PERMISSIONS)
     }
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
+        // ... (el resto del código permanece igual)
         ContextCompat.checkSelfPermission(
             baseContext, it
         ) == PackageManager.PERMISSION_GRANTED
     }
 
     override fun onDestroy() {
+        // ... (el resto del código permanece igual)
         super.onDestroy()
         cameraExecutor.shutdown()
     }
 
     companion object {
+        // ... (el resto del código permanece igual)
         private const val TAG = "CameraXApp"
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private val REQUIRED_PERMISSIONS =
